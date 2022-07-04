@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>grid system</title>
+    <style>
+        :root {
+            --max-content-width: 1280px;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        main {
+            display: grid;
+            grid-template-columns:
+                minmax(10px, 1fr) minmax(0, calc(var(--max-content-width) / 3)) minmax(0, calc(var(--max-content-width) / 3)) minmax(0, calc(var(--max-content-width) / 3)) minmax(10px, 1fr);
+
+            grid-template-areas: "main-left  main main main  main-right";
+            grid-gap: 0;
+        }
+
+        main>* {
+            grid-column: main;
+            padding: 20px;
+        }
+
+        .hero {
+            grid-column: 1 / -1;
+            background: lightblue;
+            text-align: center;
+        }
+
+        header,
+        footer {
+            background: tomato;
+            padding: 2rem;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>Header</header>
+    <main>
+        <div>
+            <h2>A heading</h2>
+            <p>
+                Enim provident et omnis ea nisi. Quo aperiam nesciunt sed et id
+                maiores laudantium ipsa. Aut quis voluptate ipsa odio quia ab.
+            </p>
+        </div>
+        <div class="hero">
+            <h2>Hero</h2>
+            <p>This row stretches to the edges.</p>
+        </div>
+        <div>
+            <h2>Another heading</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis egestas
+                dolor in diam rutrum, vel suscipit ante lacinia. Proin faucibus, purus
+                at rutrum congue, tellus purus suscipit nisl, sit amet iaculis quam
+                enim vulputate libero. Pellentesque dapibus ullamcorper nisl, sed
+                posuere velit imperdiet sed. Duis at laoreet lacus. Duis mauris mi,
+                tincidunt sit amet bibendum ac, aliquet eget mi. Morbi sodales lorem
+                dolor, vitae efficitur turpis venenatis eget. Suspendisse commodo nisl
+                urna, sit amet dictum est ultricies in. Sed egestas, mi non dignissim
+                ultricies, nunc felis convallis orci, quis ultrices libero turpis
+                luctus lectus. Donec ut scelerisque erat, ut pharetra purus. Ut porta
+                eleifend mi, eget ultrices massa malesuada a. Ut a egestas orci.
+            </p>
+            <p>
+                Curabitur posuere dapibus posuere. Fusce ligula erat, auctor ut metus
+                et, convallis condimentum massa. In a mi maximus, porta elit et, porta
+                lacus. Duis at orci euismod, feugiat ex et, tincidunt leo. Fusce et
+                orci ut lacus vestibulum venenatis posuere et tellus. Donec molestie
+                lobortis hendrerit. Quisque interdum ullamcorper magna, sit amet
+                pulvinar augue venenatis sed. Quisque scelerisque gravida magna.
+                Vivamus in tortor quis nibh porta suscipit.
+            </p>
+            <p>
+                Nunc interdum lacus eu laoreet mollis. Nunc ac ullamcorper sapien, sed
+                vestibulum tellus. Vivamus vitae neque ultricies, pharetra felis
+                rutrum, imperdiet lorem. Integer quis sapien volutpat, maximus tortor
+                nec, vestibulum nulla. Aenean et porttitor ante. Morbi tincidunt
+                faucibus diam, eget auctor justo vehicula et. Morbi ut hendrerit
+                libero.
+            </p>
+            <p>
+                Class aptent taciti sociosqu ad litora torquent per conubia nostra,
+                per inceptos himenaeos. Integer sagittis, felis eget pulvinar
+                lobortis, eros metus congue lorem, et consequat justo eros a risus.
+                Curabitur eu urna enim. Donec porttitor massa est, ut mollis diam
+                faucibus eget. Maecenas in sem vehicula, fringilla sem sit amet,
+                maximus orci. Nunc quis elementum justo, non mattis dolor. Vivamus
+                blandit risus vel faucibus euismod. Cras in varius mi. Phasellus vitae
+                enim congue, volutpat lacus et, posuere enim.
+            </p>
+            <p>
+                Phasellus congue nulla nulla, vel vestibulum neque rhoncus ac. Aenean
+                nec bibendum odio. Sed accumsan ut nibh sed tincidunt. Vestibulum sit
+                amet nunc a dui varius mattis vel in erat. Mauris in nisi purus. Nunc
+                sed neque sed arcu pretium ullamcorper ac non eros. Nullam nec purus
+                ut turpis viverra rutrum.
+            </p>
+        </div>
+        <div class="hero">
+            <h2>Another Hero</h2>
+            <p>This row stretches to the edges.</p>
+        </div>
+    </main>
+    <footer>Footer</footer>
+</body>
+
+</html>
