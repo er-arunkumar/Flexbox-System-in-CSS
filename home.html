@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Flex-box</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            max-width: 1200px;
+            margin: 0 auto;
+            background: orange;
+        }
+        .nav{
+            padding: 10px;
+            display: flex;
+            flex-direction: row;
+            background: #000;
+            justify-content: space-between;
+        }
+        .nav>h1{
+            display: flex;
+            color:#fff;
+        }
+        .nav>ul{
+            display: flex;
+        }
+        .nav>ul>li{
+            display: inline-flex;
+            list-style-type: none;
+            padding:10px;
+        } 
+        .nav>ul>li>a{
+            text-decoration: none;
+            color: #fff;
+        }
+        .nav>ul>li>a:hover{
+            color: orange;
+        }
+        .para{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            padding: 40px;
+            color: #fff;
+            text-align: justify;
+        }
+        .para>p{
+            padding:10px 20px;
+        }
+        .images{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            height: auto;
+            max-width: 930px;
+            margin: 0 auto;
+        }
+        .images>img{
+            padding:30px 80px 20px ;
+            border-radius: 50%;
+            object-fit: cover;
+
+        }
+        .btn{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin: 30px 0;
+        }
+        .btn__first{
+            width: 250px;
+            height: 40px;
+            color: white;
+            background: black;
+            border-radius: 5px;
+            font-weight: 600;
+            border:none;
+            cursor: pointer;
+        }
+        .btn__first:hover{
+            background: transparent;
+            color: #000;
+            border: 2px solid #000;
+        }
+        .footer{
+            display: flex;
+            height: 40px;
+            justify-content: center;
+            align-items: flex-end;
+            color: #fff;
+            background: #000;
+            border-top: 2px solid #fff;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <h1>Flex-Box</h1>
+            <ul>
+               <li><a href="">Home</a></li>
+               <li><a href="">About</a></li>
+               <li><a href="">Contact</a></li>
+        </div>
+        <div class="para">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro aut sapiente deserunt distinctio, ducimus modi inventore esse nihil nesciunt eveniet dolorem velit consequuntur accusamus, temporibus illum ex nemo. Blanditiis in ad et iste reprehenderit debitis dignissimos, saepe maiores! Voluptas, sed?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia tempora pariatur totam voluptatem debitis sed assumenda quisquam iste dolorem explicabo.</p>
+        </div>
+        <div class="images">
+            <img src="images/female image 1.jpg" alt="">
+            <img src="images/female image 5.jpg" alt="">
+            <img src="images/female image2.jpg" alt="">
+            <img src="images/male image 3.jpg" alt="">
+            <img src="images/female image3.jpg" alt="">
+            <img src="images/male image 4.jpg" alt="">
+        </div>
+        <div class="btn">
+            <button class="btn__first">Learn Flex-Box</button>
+        </div>
+        <div class="footer">
+            <p>&copy;Copyrighted by designs.</p>
+        </div>
+    </div>
+</body>
+</html>
